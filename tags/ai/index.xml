@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI on 一休&#39;s Blog</title>
+    <link>http://localhost:1313/tags/ai/</link>
+    <description>Recent content in AI on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Jun 2024 07:59:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Viggle 视频生成器！AI终于可以精准控制角色的姿势了！</title>
+      <link>http://localhost:1313/posts/tool/viggleai/</link>
+      <pubDate>Thu, 20 Jun 2024 07:59:01 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/tool/viggleai/</guid>
+      <description>简介 Viggle 自推出以来就受到了广泛关注，因为它解决了 AI 视频生成领域的一个关键问「如何准确控制角色的身体动作」。我们之前学习的一些AI视频工具通常通过文本或图像生成整体视觉效果，因此很难准确控制角色的动作。 它将角色动作从整体画面中分离出来并对其进行处理。这允许在另一个角色上完美地复制真人</description>
+    </item>
+    
+  </channel>
+</rss>
