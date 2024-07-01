@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>机场测评 on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/categories/%E6%9C%BA%E5%9C%BA%E6%B5%8B%E8%AF%84/</link>
+    <description>Recent content in 机场测评 on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 29 Jun 2024 11:54:51 +0800</lastBuildDate><atom:link href="https://yixiu.icu/categories/%E6%9C%BA%E5%9C%BA%E6%B5%8B%E8%AF%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>红杏加速器</title>
+      <link>https://yixiu.icu/posts/tool/%E7%BA%A2%E6%9D%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</link>
+      <pubDate>Sat, 29 Jun 2024 11:54:51 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tool/%E7%BA%A2%E6%9D%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</guid>
+      <description>机场分类大致介绍 专线机场： 流量特点：你的流量通过专线绕过防火墙，完全隐藏。 风险：这是三种机场中最安全的一种，防火墙无法监测到流量。 优点：速度快，安全性高。 缺点：价格最高。 中转机场： 流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。 风险：风险适中，主要风险集中在中</description>
+    </item>
+    
+  </channel>
+</rss>

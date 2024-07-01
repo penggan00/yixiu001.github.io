@@ -6,14 +6,14 @@
     <description>Recent content in 👨🏻‍💻 技术 on 一休&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 03 Jun 2024 22:20:48 +0800</lastBuildDate><atom:link href="https://yixiu.icu/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jun 2024 00:37:27 +0800</lastBuildDate><atom:link href="https://yixiu.icu/posts/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nginx正向tcp代理</title>
-      <link>https://yixiu.icu/posts/tech/nginx%E6%AD%A3%E5%90%91tcp%E4%BB%A3%E7%90%86/</link>
-      <pubDate>Mon, 03 Jun 2024 22:20:48 +0800</pubDate>
+      <title>Wrangler Commands</title>
+      <link>https://yixiu.icu/posts/tech/wranglercommands/</link>
+      <pubDate>Fri, 21 Jun 2024 00:37:27 +0800</pubDate>
       
-      <guid>https://yixiu.icu/posts/tech/nginx%E6%AD%A3%E5%90%91tcp%E4%BB%A3%E7%90%86/</guid>
-      <description>Nginx模块 nginx正向tcp代理需要stream模块，检查模块的方法如下 nginx -V | grep -i stream Nginx配置 配置如下 stream { upstream backend_servers { # ... 上游服务器池配置 ... server 10.190.17.155:80; } server { listen 127.0.0.1:12345; # 监听端口，客户端将连接到这个端口 proxy_pass backend_servers; # 代理到上游服务器池 # 可选配置： # proxy_connect_timeout 10s; # 连接超时时间 # proxy_timeout 30s; # 数据传输超时时间 } }</description>
+      <guid>https://yixiu.icu/posts/tech/wranglercommands/</guid>
+      <description>Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [&amp;lt;COMMAND&amp;gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [&amp;lt;NAME&amp;gt;] [OPTIONS] NAME</description>
     </item>
     
   </channel>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用 | 一休&#39;s Blog</title>
+<meta name="keywords" content="ssh工具">
+<meta name="description" content="简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就">
+<meta name="author" content="一休">
+<link rel="canonical" href="https://yixiu.icu/posts/tool/sshtool/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yixiu.icu/img/logo.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yixiu.icu/img/logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yixiu.icu/img/logo.jpg">
+<link rel="apple-touch-icon" href="https://yixiu.icu/img/logo.jpg">
+<link rel="mask-icon" href="https://yixiu.icu/img/logo.jpg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yixiu.icu/posts/tool/sshtool/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017074186344897"
+        crossorigin="anonymous"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+
+<meta property="og:title" content="几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用" />
+<meta property="og:description" content="简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yixiu.icu/posts/tool/sshtool/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-22T10:59:17+08:00" />
+<meta property="article:modified_time" content="2024-06-22T10:59:17+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用"/>
+<meta name="twitter:description" content="简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "📚文章",
+          "item": "https://yixiu.icu/posts/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position":  2 ,
+          "name": "🔧 工具",
+          "item": "https://yixiu.icu/posts/tool/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用",
+      "item": "https://yixiu.icu/posts/tool/sshtool/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用",
+  "name": "几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows\/Mac\/Linux 跨平台通用",
+  "description": "简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就",
+  "keywords": [
+    "ssh工具"
+  ],
+  "articleBody": "简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就等于开了一个好头。\n一、Termius（⚠️请自行查阅使用方式） 官方网站：https://termius.com\n下载地址：https://termius.com/download\n简单介绍：Termius 是一款跨平台多终端的 SSH 工具，包括 Windows、MacOS、Linux、iPhone、iPad、Android 等多个平台，全平台都可以同步。目前分为免费版和付费版，免费版功能相对有限，但是基础功能都够用。使用 GitHub 教育优惠可以免费使用付费版。\n推荐理由：功能丰富，界面美观，GitHub 学生用户免费使用付费版可多终端同步。\n二、FinalShell（⚠️请自行查阅使用方式） 官方网站：https://www.hostbuf.com\n下载地址：https://www.hostbuf.com/t/988.html\n简单介绍：FinalShell 是一体化的的服务器,网络管理软件，不仅是 SSH 客户端，还是功能强大的开发、运维工具，充分满足开发、运维需求。特色功能包括云端同步、本地化命令输入框、支持自动补全、命令历史、自定义命令参数等。支持 Windows、MacOS、Linux 等多终端平台。同样分为免费版和高级版，高级版增加一些监控功能。\n推荐理由：功能丰富，网友推荐多，大家都说好。\n三、MobaXterm（⚠️请自行查阅使用方式） 官方网站：https://mobaxterm.mobatek.net\n下载地址：https://mobaxterm.mobatek.net/download.html\n简单介绍：MobaXterm 是您远程计算的终极工具箱。在单个 Windows 应用程序中，它提供了大量为程序员、网站管理员、IT 管理员以及几乎所有需要以更简单的方式处理远程工作的用户量身定制的功能。MobaXterm 为 Windows 桌面提供所有重要的远程网络工具（SSH、X11、RDP、VNC、FTP、MOSH 等）和Unix 命令（bash、ls、cat、sed、grep、awk、rsync 等） ，在一个开箱即用的可移植 exe 文件中。\n推荐理由：免费版也够用，功能丰富。\n四、electerm（⚠️请自行查阅使用方式） 官方网站：https://electerm.html5beta.com/index-zh_cn.html\n项目地址：https://github.com/electerm/electerm\n下载地址：https://github.com/electerm/electerm/releases\n简单介绍：electerm 是一个跨平台的 Terminal/SSH/SFTP 客户端工具，同时支持 Linux、MacOS、Windows，基于 electron/ssh2 等开源组件。\n推荐理由：开源，简单好用。\n五、Tabby（⚠️请自行查阅使用方式） 官方网站：https://tabby.sh\n下载地址：https://github.com/Eugeny/tabby/releases\n简单介绍：Tabby 是一个可无限定制的跨平台终端应用程序，用于本地 shell、串行、SSH 和 Telnet 连接。\n推荐理由：老外都说好用。\n六、Xterminal（⚠️请自行查阅使用方式） 官方网站：https://www.xterminal.cn\n简单介绍：不仅是强大的SSH工具，更提供本地控制台，以及更多即将推出的开发相关功能，让您专注于创造卓越的代码。AI 命令提示、AI 解答、命令补全提示灯先进功能。\n推荐理由：最近新看到的一款 SSH 工具，感觉还不错。\n以上就是一些 SSH 工具不完全推荐，后面如果有更新再做补充。\n",
+  "wordCount" : "1565",
+  "inLanguage": "zh",
+  "datePublished": "2024-06-22T10:59:17+08:00",
+  "dateModified": "2024-06-22T10:59:17+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "一休"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yixiu.icu/posts/tool/sshtool/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "一休's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yixiu.icu/img/logo.jpg"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yixiu.icu/" accesskey="h" title="一休&#39;s Blog (Alt + H)">
+            <img src="https://yixiu.icu/img/logo.jpg" alt="logo" aria-label="logo"
+                 height="35">一休&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yixiu.icu/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/" title="🏠 主页">
+                <span>🏠 主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/posts" title="📚 文章">
+                <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/tags" title="🧩 标签">
+                <span>🧩 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/archives/" title="⏱️ 时间轴">
+                <span>⏱️ 时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/about" title="🙋🏻‍♂️ 关于">
+                <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/links" title="🤝 友链">
+                <span>🤝 友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://yixiu.icu/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://yixiu.icu/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://yixiu.icu/posts/tool/">🔧 工具</a></div>
+            <h1 class="post-title">
+                几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用
+            </h1>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2024-06-22
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>1565字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>4分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>一休
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://yixiu.icu/tags/ssh%E5%B7%A5%E5%85%B7/" style="color: var(--secondary)!important;">Ssh工具</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://yixiu.icu/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId: "https://yixiu001-myblog.hf.space", 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e7%ae%80%e4%bb%8b" aria-label="简介">简介</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%80termius%e8%af%b7%e8%87%aa%e8%a1%8c%e6%9f%a5%e9%98%85%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="一、Termius（⚠️请自行查阅使用方式）">一、Termius（⚠️请自行查阅使用方式）</a></li>
+                <li>
+                    <a href="#%e4%ba%8cfinalshell%e8%af%b7%e8%87%aa%e8%a1%8c%e6%9f%a5%e9%98%85%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="二、FinalShell（⚠️请自行查阅使用方式）">二、FinalShell（⚠️请自行查阅使用方式）</a></li>
+                <li>
+                    <a href="#%e4%b8%89mobaxterm%e8%af%b7%e8%87%aa%e8%a1%8c%e6%9f%a5%e9%98%85%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="三、MobaXterm（⚠️请自行查阅使用方式）">三、MobaXterm（⚠️请自行查阅使用方式）</a></li>
+                <li>
+                    <a href="#%e5%9b%9belecterm%e8%af%b7%e8%87%aa%e8%a1%8c%e6%9f%a5%e9%98%85%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="四、electerm（⚠️请自行查阅使用方式）">四、electerm（⚠️请自行查阅使用方式）</a></li>
+                <li>
+                    <a href="#%e4%ba%94tabby%e8%af%b7%e8%87%aa%e8%a1%8c%e6%9f%a5%e9%98%85%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="五、Tabby（⚠️请自行查阅使用方式）">五、Tabby（⚠️请自行查阅使用方式）</a></li>
+                <li>
+                    <a href="#%e5%85%adxterminal%e8%af%b7%e8%87%aa%e8%a1%8c%e6%9f%a5%e9%98%85%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f" aria-label="六、Xterminal（⚠️请自行查阅使用方式）">六、Xterminal（⚠️请自行查阅使用方式）</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="简介">简介<a hidden class="anchor" aria-hidden="true" href="#简介">#</a></h1>
+<p>为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就等于开了一个好头。</p>
+<h2 id="一termius请自行查阅使用方式">一、Termius（⚠️请自行查阅使用方式）<a hidden class="anchor" aria-hidden="true" href="#一termius请自行查阅使用方式">#</a></h2>
+<p><img loading="lazy" src="img.png" alt="img.png"  />
+</p>
+<p>官方网站：https://termius.com</p>
+<p>下载地址：https://termius.com/download</p>
+<p>简单介绍：Termius 是一款跨平台多终端的 SSH 工具，包括 Windows、MacOS、Linux、iPhone、iPad、Android 等多个平台，全平台都可以同步。目前分为免费版和付费版，免费版功能相对有限，但是基础功能都够用。使用 GitHub 教育优惠可以免费使用付费版。</p>
+<p>推荐理由：功能丰富，界面美观，GitHub 学生用户免费使用付费版可多终端同步。</p>
+<h2 id="二finalshell请自行查阅使用方式">二、FinalShell（⚠️请自行查阅使用方式）<a hidden class="anchor" aria-hidden="true" href="#二finalshell请自行查阅使用方式">#</a></h2>
+<p><img loading="lazy" src="img1.png" alt="img3.png"  />
+
+官方网站：https://www.hostbuf.com</p>
+<p>下载地址：https://www.hostbuf.com/t/988.html</p>
+<p>简单介绍：FinalShell 是一体化的的服务器,网络管理软件，不仅是 SSH 客户端，还是功能强大的开发、运维工具，充分满足开发、运维需求。特色功能包括云端同步、本地化命令输入框、支持自动补全、命令历史、自定义命令参数等。支持 Windows、MacOS、Linux 等多终端平台。同样分为免费版和高级版，高级版增加一些监控功能。</p>
+<p>推荐理由：功能丰富，网友推荐多，大家都说好。</p>
+<h2 id="三mobaxterm请自行查阅使用方式">三、MobaXterm（⚠️请自行查阅使用方式）<a hidden class="anchor" aria-hidden="true" href="#三mobaxterm请自行查阅使用方式">#</a></h2>
+<p><img loading="lazy" src="img3.png" alt="img3.png"  />
+</p>
+<p>官方网站：https://mobaxterm.mobatek.net</p>
+<p>下载地址：https://mobaxterm.mobatek.net/download.html</p>
+<p>简单介绍：MobaXterm 是您远程计算的终极工具箱。在单个 Windows 应用程序中，它提供了大量为程序员、网站管理员、IT 管理员以及几乎所有需要以更简单的方式处理远程工作的用户量身定制的功能。MobaXterm 为 Windows 桌面提供所有重要的远程网络工具（SSH、X11、RDP、VNC、FTP、MOSH 等）和Unix 命令（bash、ls、cat、sed、grep、awk、rsync 等） ，在一个开箱即用的可移植 exe 文件中。</p>
+<p>推荐理由：免费版也够用，功能丰富。</p>
+<h2 id="四electerm请自行查阅使用方式">四、electerm（⚠️请自行查阅使用方式）<a hidden class="anchor" aria-hidden="true" href="#四electerm请自行查阅使用方式">#</a></h2>
+<p><img loading="lazy" src="img4.png" alt="img4.png"  />
+</p>
+<p>官方网站：https://electerm.html5beta.com/index-zh_cn.html</p>
+<p>项目地址：https://github.com/electerm/electerm</p>
+<p>下载地址：https://github.com/electerm/electerm/releases</p>
+<p>简单介绍：electerm 是一个跨平台的 Terminal/SSH/SFTP 客户端工具，同时支持 Linux、MacOS、Windows，基于 electron/ssh2 等开源组件。</p>
+<p>推荐理由：开源，简单好用。</p>
+<h2 id="五tabby请自行查阅使用方式">五、Tabby（⚠️请自行查阅使用方式）<a hidden class="anchor" aria-hidden="true" href="#五tabby请自行查阅使用方式">#</a></h2>
+<p><img loading="lazy" src="img5.png" alt="img5.png"  />
+</p>
+<p>官方网站：https://tabby.sh</p>
+<p>下载地址：https://github.com/Eugeny/tabby/releases</p>
+<p>简单介绍：Tabby 是一个可无限定制的跨平台终端应用程序，用于本地 shell、串行、SSH 和 Telnet 连接。</p>
+<p>推荐理由：老外都说好用。</p>
+<h2 id="六xterminal请自行查阅使用方式">六、Xterminal（⚠️请自行查阅使用方式）<a hidden class="anchor" aria-hidden="true" href="#六xterminal请自行查阅使用方式">#</a></h2>
+<p><img loading="lazy" src="img6.png" alt="img6.png"  />
+</p>
+<p>官方网站：https://www.xterminal.cn</p>
+<p>简单介绍：不仅是强大的SSH工具，更提供本地控制台，以及更多即将推出的开发相关功能，让您专注于创造卓越的代码。AI 命令提示、AI 解答、命令补全提示灯先进功能。</p>
+<p>推荐理由：最近新看到的一款 SSH 工具，感觉还不错。</p>
+<p>以上就是一些 SSH 工具不完全推荐，后面如果有更新再做补充。</p>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://yixiu.icu/img/wechatpay.jpg" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://yixiu.icu/img/alipay.jpg" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="prev" href="https://yixiu.icu/posts/gratis/serv00-vless/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>Serv00搭建vless节点</span>
+  </a>
+  <a class="next" href="https://yixiu.icu/posts/gratis/serv00%E6%B3%A8%E5%86%8C%E4%BB%A5%E5%8F%8A%E4%BF%9D%E5%8F%B7/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>10年VPS主机serv00免费获取，自动化保号</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 20px;
+        content: '👉展开评论';
+        color: var(--content);
+    }
+    .comments_details[open] summary::marker{
+        font-size: 20px;
+        content: '👇关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);">...</span>
+        </summary>
+        <div id="tcomment"></div>
+    </details>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js">
+    </script>
+    <script>
+        twikoo.init({
+            envId: "https://yixiu001-myblog.hf.space",
+        el: "#tcomment",
+            lang: 'zh-CN',
+            region:  null ,
+        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        })
+    </script>
+</div>
+</article>
+</main>
+
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                let textData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '复制';
+
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                let text = codeblock.textContent;
+
+                
+                
+                
+                
+                navigator.clipboard.writeText(text);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {}
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+</body>
+
+</html>

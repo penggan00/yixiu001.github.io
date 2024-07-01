@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>免费域名 on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/</link>
+    <description>Recent content in 免费域名 on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 21 Jun 2024 19:42:08 +0800</lastBuildDate><atom:link href="https://yixiu.icu/tags/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ClouDNS域名免费注册，并托管到cloudflare，</title>
+      <link>https://yixiu.icu/posts/gratis/cloudns%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</link>
+      <pubDate>Fri, 21 Jun 2024 19:42:08 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/cloudns%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</guid>
+      <description>TG技术交流群（小白误入）：点击打开 ClouDNS官网：点击打开 cloudflare官网：点击打开 关于注册ClouDNS所遇到的问题详解 一、workers和pages 自定义域名证书一直显示初始化【需要双向解析】 这是大多数免费域名注册商对域名的一个限制导致我们需要双向解析 如果你问客</description>
+    </item>
+    
+  </channel>
+</rss>

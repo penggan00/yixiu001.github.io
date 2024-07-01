@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vless on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/categories/vless/</link>
+    <description>Recent content in Vless on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 25 Jun 2024 20:26:25 +0800</lastBuildDate><atom:link href="https://yixiu.icu/categories/vless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Serv00搭建vless节点</title>
+      <link>https://yixiu.icu/posts/gratis/serv00-vless/</link>
+      <pubDate>Tue, 25 Jun 2024 20:26:25 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/serv00-vless/</guid>
+      <description>一、注册serv00账号，以及自动化保号➡️：免费注册十年VPS主机 二、🔗搭建vless节点 1，配置【开启权限】 打开serv00后台，后台地址在注册的时候会发你邮件（参数是这个DevilWEB webpanel）,登录账号是Login,密码是Password 第一步需要做的就是开启可</description>
+    </item>
+    
+  </channel>
+</rss>

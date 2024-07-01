@@ -6,7 +6,25 @@
     <description>Recent content in 🔧 工具 on 一休&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 20 Jun 2024 07:59:01 +0800</lastBuildDate><atom:link href="https://yixiu.icu/posts/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jun 2024 11:54:51 +0800</lastBuildDate><atom:link href="https://yixiu.icu/posts/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>红杏加速器</title>
+      <link>https://yixiu.icu/posts/tool/%E7%BA%A2%E6%9D%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</link>
+      <pubDate>Sat, 29 Jun 2024 11:54:51 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tool/%E7%BA%A2%E6%9D%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</guid>
+      <description>机场分类大致介绍 专线机场： 流量特点：你的流量通过专线绕过防火墙，完全隐藏。 风险：这是三种机场中最安全的一种，防火墙无法监测到流量。 优点：速度快，安全性高。 缺点：价格最高。 中转机场： 流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。 风险：风险适中，主要风险集中在中</description>
+    </item>
+    
+    <item>
+      <title>几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用</title>
+      <link>https://yixiu.icu/posts/tool/sshtool/</link>
+      <pubDate>Sat, 22 Jun 2024 10:59:17 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tool/sshtool/</guid>
+      <description>简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就</description>
+    </item>
+    
     <item>
       <title>Viggle 视频生成器！AI终于可以精准控制角色的姿势了！</title>
       <link>https://yixiu.icu/posts/tool/viggleai/</link>

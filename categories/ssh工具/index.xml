@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ssh工具 on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/categories/ssh%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in Ssh工具 on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 22 Jun 2024 10:59:17 +0800</lastBuildDate><atom:link href="https://yixiu.icu/categories/ssh%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用</title>
+      <link>https://yixiu.icu/posts/tool/sshtool/</link>
+      <pubDate>Sat, 22 Jun 2024 10:59:17 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tool/sshtool/</guid>
+      <description>简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就</description>
+    </item>
+    
+  </channel>
+</rss>

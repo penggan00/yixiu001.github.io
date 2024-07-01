@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vps on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/tags/vps/</link>
+    <description>Recent content in Vps on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 29 Jun 2024 11:15:49 +0800</lastBuildDate><atom:link href="https://yixiu.icu/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>免费VPS盘点，总有一款适合你，部分可搭建vless节点</title>
+      <link>https://yixiu.icu/posts/gratis/freevps/</link>
+      <pubDate>Sat, 29 Jun 2024 11:15:49 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/freevps/</guid>
+      <description>1. Linuxone 注册地址：https://linuxone.cloud.marist.edu/#/login Linuxone是IBM推出的一个云产品，配置很高，提供2核4G内存，50G的硬盘。 大厂推出的产品，稳定性可以保证。但是这个云服务器有两个缺点： 第一个缺点就是：没有root权限，想要获</description>
+    </item>
+    
+    <item>
+      <title>关于serv00的注册以及使用问题解答</title>
+      <link>https://yixiu.icu/posts/gratis/serv00faq/</link>
+      <pubDate>Thu, 27 Jun 2024 17:31:07 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/serv00faq/</guid>
+      <description>一、注册问题 注册显示我的邮箱已经注册过 可能是确实注册了，但是你没收到邮件 还有很大概率是因为你的IP地址不干净，具体详情请看-&amp;gt;解决一切注册账号IP限制问题 注册显示成功但是没有收到邮件 检查垃圾箱 因为注册人数过多他的邮件可能延时发送 二、使用问题 ssh无法连接服务器 出现ssh: connect</description>
+    </item>
+    
+    <item>
+      <title>10年VPS主机serv00免费获取，自动化保号</title>
+      <link>https://yixiu.icu/posts/gratis/serv00%E6%B3%A8%E5%86%8C%E4%BB%A5%E5%8F%8A%E4%BF%9D%E5%8F%B7/</link>
+      <pubDate>Sat, 22 Jun 2024 10:47:24 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/serv00%E6%B3%A8%E5%86%8C%E4%BB%A5%E5%8F%8A%E4%BF%9D%E5%8F%B7/</guid>
+      <description>🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 ⚠️当前VPS只是一个虚拟机，大家可以搭</description>
+    </item>
+    
+    <item>
+      <title>10年VPS主机免费获取，并且部署vless节点</title>
+      <link>https://yixiu.icu/posts/gratis/freevpsandvless/</link>
+      <pubDate>Sat, 22 Jun 2024 10:47:24 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/freevpsandvless/</guid>
+      <description>🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BPB on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/tags/bpb/</link>
+    <description>Recent content in BPB on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 01 Jul 2024 09:46:15 +0800</lastBuildDate><atom:link href="https://yixiu.icu/tags/bpb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BPB-Panel，结合cloudflare实现优选订阅永久免费订阅，速度极快，秒开8K，永不失联的免费节点</title>
+      <link>https://yixiu.icu/posts/gratis/bpbpanel/</link>
+      <pubDate>Mon, 01 Jul 2024 09:46:15 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/bpbpanel/</guid>
+      <description>搭建流程 Cloudflare官网地址：【点击前往】 项目地址【点击前往】 KV空间绑定名称:bpb 网址后缀：/panel 原始默认密码：admin 优选IP地址【点击前往】 可以添加PROXYIP 和 UUID PROXYIP获取地址【点击前往】（选择你想要的国家和IP。失效重新换就可以） UUID获取</description>
+    </item>
+    
+  </channel>
+</rss>

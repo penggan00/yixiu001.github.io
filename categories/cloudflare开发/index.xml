@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cloudflare开发 on 一休&#39;s Blog</title>
+    <link>https://yixiu.icu/categories/cloudflare%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in Cloudflare开发 on 一休&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 21 Jun 2024 00:37:27 +0800</lastBuildDate><atom:link href="https://yixiu.icu/categories/cloudflare%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wrangler Commands</title>
+      <link>https://yixiu.icu/posts/tech/wranglercommands/</link>
+      <pubDate>Fri, 21 Jun 2024 00:37:27 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tech/wranglercommands/</guid>
+      <description>Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [&amp;lt;COMMAND&amp;gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [&amp;lt;NAME&amp;gt;] [OPTIONS] NAME</description>
+    </item>
+    
+  </channel>
+</rss>

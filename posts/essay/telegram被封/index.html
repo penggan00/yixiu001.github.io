@@ -62,7 +62,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017074186344897"
+        crossorigin="anonymous"></script>
 
 
 <script>
@@ -505,7 +506,7 @@ Telegram的官方客服人员非常的少，所以处理起来速度方面不要
 <li>半个月到一个月之内保持登陆状态，不要重复退出登陆，不要进行一些违规操作</li>
 </ul>
 <p>Telegram官网:
-<a href="https://telegram.org">https://telegram.org</a></p>
+<a href="https://telegram.org" target="_blank" rel="noopener">https://telegram.org</a></p>
 
 
         </div>
@@ -544,11 +545,6 @@ Telegram的官方客服人员非常的少，所以处理起来速度方面不要
     <span class="title">« 上一页</span>
     <br>
     <span>Viggle 视频生成器！AI终于可以精准控制角色的姿势了！</span>
-  </a>
-  <a class="next" href="https://yixiu.icu/posts/tech/nginx%E6%AD%A3%E5%90%91tcp%E4%BB%A3%E7%90%86/">
-    <span class="title">下一页 »</span>
-    <br>
-    <span>Nginx正向tcp代理</span>
   </a>
 </nav>
 
@@ -702,10 +698,12 @@ Telegram的官方客服人员非常的少，所以处理起来速度方面不要
 
         copybutton.addEventListener('click', (cb) => {
             if ('clipboard' in navigator) {
-                let text = codeblock.textContent +
-                    '\r\n————————————————\r\n' +
-                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
-                '\r\n原文链接：' + location.href;
+                let text = codeblock.textContent;
+
+                
+                
+                
+                
                 navigator.clipboard.writeText(text);
                 copyingDone();
                 return;

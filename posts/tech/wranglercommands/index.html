@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Wrangler Commands | 一休&#39;s Blog</title>
+<meta name="keywords" content="Wrangler常用命令, cloudflare开发">
+<meta name="description" content="Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [&lt;COMMAND&gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [&lt;NAME&gt;] [OPTIONS] NAME">
+<meta name="author" content="一休">
+<link rel="canonical" href="https://yixiu.icu/posts/tech/wranglercommands/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yixiu.icu/img/logo.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yixiu.icu/img/logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yixiu.icu/img/logo.jpg">
+<link rel="apple-touch-icon" href="https://yixiu.icu/img/logo.jpg">
+<link rel="mask-icon" href="https://yixiu.icu/img/logo.jpg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yixiu.icu/posts/tech/wranglercommands/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017074186344897"
+        crossorigin="anonymous"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+
+<meta property="og:title" content="Wrangler Commands" />
+<meta property="og:description" content="Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [&lt;COMMAND&gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [&lt;NAME&gt;] [OPTIONS] NAME" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yixiu.icu/posts/tech/wranglercommands/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-21T00:37:27+08:00" />
+<meta property="article:modified_time" content="2024-06-21T00:37:27+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wrangler Commands"/>
+<meta name="twitter:description" content="Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [&lt;COMMAND&gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [&lt;NAME&gt;] [OPTIONS] NAME"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "📚文章",
+          "item": "https://yixiu.icu/posts/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position":  2 ,
+          "name": "👨🏻‍💻 技术",
+          "item": "https://yixiu.icu/posts/tech/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Wrangler Commands",
+      "item": "https://yixiu.icu/posts/tech/wranglercommands/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Wrangler Commands",
+  "name": "Wrangler Commands",
+  "description": "Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [\u0026lt;COMMAND\u0026gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [\u0026lt;NAME\u0026gt;] [OPTIONS] NAME",
+  "keywords": [
+    "Wrangler常用命令", "cloudflare开发"
+  ],
+  "articleBody": "Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。\nwrangler docs [] COMMAND string 自选\n要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。\n#init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。\nwrangler init [] [OPTIONS] NAME string 可选（默认：工作目录的名称）\nWorkers 项目的名称。这是生成 wrangler.toml 的配置文件中的目录名称和 name 属性。\n–yes boolean 自选\n对新项目的任何提示回答“是”。\n–from-dash string 自选\n获取从仪表板初始化的 Worker。这是通过传递标志和 Worker 名称来完成的\nwrangler init --from-dash 使用该命令后，该 --from-dash 命令不会自动同步对仪表板所做的更改。因此，建议您继续使用 CLI。\n#generate 使用现有 Workers 模板创建新项目。\nwrangler generate [] [TEMPLATE] NAME string 可选（默认：工作目录的名称）\nWorkers 项目的名称。这是生成 wrangler.toml 的配置文件中的目录名称和 name 属性。\nTEMPLATE string 自选\nGitHub 模板的 URL，默认的 worker-template.\n浏览 cloudflare/workers-sdk 上的可用模板列表存储库。\n#d1 与 Cloudflare 的 D1 服务进行交互。\ncreate 创建新的 D1 数据库，并提供将放入 wrangler.toml 文件中的绑定和 UUID。\nwrangler d1 create [OPTIONS] DATABASE_NAME string 必填\n新 D1 数据库的名称。\n–location string 自选\n为数据库服务提供可选位置提示。 可用选项包括 weur（西欧）、eeur（东欧）、apac（亚太地区）、oc（大洋洲）、wnam（北美西部）和 enam（北美东部）。\n后续待补充 ",
+  "wordCount" : "525",
+  "inLanguage": "zh",
+  "datePublished": "2024-06-21T00:37:27+08:00",
+  "dateModified": "2024-06-21T00:37:27+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "一休"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yixiu.icu/posts/tech/wranglercommands/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "一休's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yixiu.icu/img/logo.jpg"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yixiu.icu/" accesskey="h" title="一休&#39;s Blog (Alt + H)">
+            <img src="https://yixiu.icu/img/logo.jpg" alt="logo" aria-label="logo"
+                 height="35">一休&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yixiu.icu/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/" title="🏠 主页">
+                <span>🏠 主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/posts" title="📚 文章">
+                <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/tags" title="🧩 标签">
+                <span>🧩 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/archives/" title="⏱️ 时间轴">
+                <span>⏱️ 时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/about" title="🙋🏻‍♂️ 关于">
+                <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/links" title="🤝 友链">
+                <span>🤝 友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://yixiu.icu/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://yixiu.icu/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://yixiu.icu/posts/tech/">👨🏻‍💻 技术</a></div>
+            <h1 class="post-title">
+                Wrangler Commands
+            </h1>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2024-06-21
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>525字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>一休
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://yixiu.icu/tags/wrangler/" style="color: var(--secondary)!important;">Wrangler</a>
+                &nbsp;<a href="https://yixiu.icu/tags/cloudflare/" style="color: var(--secondary)!important;">Cloudflare</a>
+                &nbsp;<a href="https://yixiu.icu/tags/cloudflare-workers/" style="color: var(--secondary)!important;">Cloudflare Workers</a>
+                &nbsp;<a href="https://yixiu.icu/tags/cloudflare-pages/" style="color: var(--secondary)!important;">Cloudflare Pages</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://yixiu.icu/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId: "https://yixiu001-myblog.hf.space", 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#wrangler-%e6%8f%90%e4%be%9b%e4%ba%86%e8%ae%b8%e5%a4%9a%e5%91%bd%e4%bb%a4%e6%9d%a5%e7%ae%a1%e7%90%86%e6%82%a8%e7%9a%84-cloudflare-workers" aria-label="Wrangler 提供了许多命令来管理您的 Cloudflare Workers。">Wrangler 提供了许多命令来管理您的 Cloudflare Workers。</a><ul>
+                        
+                <li>
+                    <a href="#docs" aria-label="#docs">#docs</a></li>
+                <li>
+                    <a href="#init" aria-label="#init">#init</a></li>
+                <li>
+                    <a href="#generate" aria-label="#generate">#generate</a></li>
+                <li>
+                    <a href="#d1" aria-label="#d1">#d1</a><ul>
+                        
+                <li>
+                    <a href="#create" aria-label="create">create</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%90%8e%e7%bb%ad%e5%be%85%e8%a1%a5%e5%85%85httpsdeveloperscloudflarecomworkerswranglercommandscreate" aria-label="后续待补充"><a href="https://developers.cloudflare.com/workers/wrangler/commands/#create" target="_blank" rel="noopener">后续待补充</a></a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="wrangler-提供了许多命令来管理您的-cloudflare-workers">Wrangler 提供了许多命令来管理您的 Cloudflare Workers。<a hidden class="anchor" aria-hidden="true" href="#wrangler-提供了许多命令来管理您的-cloudflare-workers">#</a></h1>
+<h2 id="docs">#docs<a hidden class="anchor" aria-hidden="true" href="#docs">#</a></h2>
+<p>在默认浏览器中打开 Cloudflare 开发人员文档。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wrangler docs <span style="color:#f92672">[</span>&lt;COMMAND&gt;<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><strong>COMMAND <code>string</code> 自选</strong></p>
+<p>要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。</p>
+<h2 id="init">#init<a hidden class="anchor" aria-hidden="true" href="#init">#</a></h2>
+<p>通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wrangler init <span style="color:#f92672">[</span>&lt;NAME&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><strong>NAME <code>string</code> 可选（默认：工作目录的名称）</strong></p>
+<p>Workers 项目的名称。这是生成 <code>wrangler.toml</code> 的配置文件中的目录名称和 <code>name</code> 属性。</p>
+<p><strong>&ndash;yes <code>boolean</code>  自选</strong></p>
+<p>对新项目的任何提示回答“是”。</p>
+<p><strong>&ndash;from-dash <code>string</code> 自选</strong></p>
+<p>获取从仪表板初始化的 Worker。这是通过传递标志和 Worker 名称来完成的</p>
+<p><code>wrangler init --from-dash &lt;WORKER_NAME&gt;</code></p>
+<p>使用该命令后，该 <code>--from-dash</code> 命令不会自动同步对仪表板所做的更改。因此，建议您继续使用 CLI。</p>
+<h2 id="generate">#generate<a hidden class="anchor" aria-hidden="true" href="#generate">#</a></h2>
+<p>使用现有 Workers 模板创建新项目。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wrangler generate <span style="color:#f92672">[</span>&lt;NAME&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>TEMPLATE<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><strong>NAME <code>string</code> 可选（默认：工作目录的名称）</strong></p>
+<p>Workers 项目的名称。这是生成 <code>wrangler.toml</code> 的配置文件中的目录名称和 <code>name</code> 属性。</p>
+<p><strong>TEMPLATE <code>string</code> 自选</strong></p>
+<p>GitHub 模板的 URL，默认的 <a href="https://github.com/cloudflare/worker-template" target="_blank" rel="noopener">worker-template</a>.</p>
+<p>浏览 <a href="https://github.com/cloudflare/workers-sdk/tree/main/templates#usage" target="_blank" rel="noopener">cloudflare/workers-sdk</a> 上的可用模板列表存储库。</p>
+<h2 id="d1">#d1<a hidden class="anchor" aria-hidden="true" href="#d1">#</a></h2>
+<p>与 Cloudflare 的 D1 服务进行交互。</p>
+<h3 id="create">create<a hidden class="anchor" aria-hidden="true" href="#create">#</a></h3>
+<p>创建新的 D1 数据库，并提供将放入 <code>wrangler.toml</code> 文件中的绑定和 <code>UUID</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wrangler d1 create &lt;DATABASE_NAME&gt; <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p><strong>DATABASE_NAME <code>string</code> 必填</strong></p>
+<p>新 D1 数据库的名称。</p>
+<p><strong>&ndash;location <code>string</code> 自选</strong></p>
+<p>为数据库服务提供可选<a href="https://developers.cloudflare.com/d1/configuration/data-location/" target="_blank" rel="noopener">位置提示</a>。
+可用选项包括 weur（西欧）、eeur（东欧）、apac（亚太地区）、oc（大洋洲）、wnam（北美西部）和 enam（北美东部）。</p>
+<h2 id="后续待补充httpsdeveloperscloudflarecomworkerswranglercommandscreate"><a href="https://developers.cloudflare.com/workers/wrangler/commands/#create" target="_blank" rel="noopener">后续待补充</a><a hidden class="anchor" aria-hidden="true" href="#后续待补充httpsdeveloperscloudflarecomworkerswranglercommandscreate">#</a></h2>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://yixiu.icu/img/wechatpay.jpg" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://yixiu.icu/img/alipay.jpg" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="prev" href="https://yixiu.icu/posts/gratis/cloudns%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>ClouDNS域名免费注册，并托管到cloudflare，</span>
+  </a>
+  <a class="next" href="https://yixiu.icu/posts/essay/jisouavocation/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>如何利用Telegram赚钱</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 20px;
+        content: '👉展开评论';
+        color: var(--content);
+    }
+    .comments_details[open] summary::marker{
+        font-size: 20px;
+        content: '👇关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);">...</span>
+        </summary>
+        <div id="tcomment"></div>
+    </details>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js">
+    </script>
+    <script>
+        twikoo.init({
+            envId: "https://yixiu001-myblog.hf.space",
+        el: "#tcomment",
+            lang: 'zh-CN',
+            region:  null ,
+        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        })
+    </script>
+</div>
+</article>
+</main>
+
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                let textData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '复制';
+
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                let text = codeblock.textContent;
+
+                
+                
+                
+                
+                navigator.clipboard.writeText(text);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {}
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+</body>
+
+</html>

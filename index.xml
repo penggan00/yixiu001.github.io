@@ -6,14 +6,104 @@
     <description>Recent content on 一休&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 20 Jun 2024 08:08:10 +0800</lastBuildDate><atom:link href="https://yixiu.icu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jul 2024 09:46:15 +0800</lastBuildDate><atom:link href="https://yixiu.icu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BPB-Panel，结合cloudflare实现优选订阅永久免费订阅，速度极快，秒开8K，永不失联的免费节点</title>
+      <link>https://yixiu.icu/posts/gratis/bpbpanel/</link>
+      <pubDate>Mon, 01 Jul 2024 09:46:15 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/bpbpanel/</guid>
+      <description>搭建流程 Cloudflare官网地址：【点击前往】 项目地址【点击前往】 KV空间绑定名称:bpb 网址后缀：/panel 原始默认密码：admin 优选IP地址【点击前往】 可以添加PROXYIP 和 UUID PROXYIP获取地址【点击前往】（选择你想要的国家和IP。失效重新换就可以） UUID获取</description>
+    </item>
+    
+    <item>
+      <title>红杏加速器</title>
+      <link>https://yixiu.icu/posts/tool/%E7%BA%A2%E6%9D%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</link>
+      <pubDate>Sat, 29 Jun 2024 11:54:51 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tool/%E7%BA%A2%E6%9D%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</guid>
+      <description>机场分类大致介绍 专线机场： 流量特点：你的流量通过专线绕过防火墙，完全隐藏。 风险：这是三种机场中最安全的一种，防火墙无法监测到流量。 优点：速度快，安全性高。 缺点：价格最高。 中转机场： 流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。 风险：风险适中，主要风险集中在中</description>
+    </item>
+    
+    <item>
+      <title>免费VPS盘点，总有一款适合你，部分可搭建vless节点</title>
+      <link>https://yixiu.icu/posts/gratis/freevps/</link>
+      <pubDate>Sat, 29 Jun 2024 11:15:49 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/freevps/</guid>
+      <description>1. Linuxone 注册地址：https://linuxone.cloud.marist.edu/#/login Linuxone是IBM推出的一个云产品，配置很高，提供2核4G内存，50G的硬盘。 大厂推出的产品，稳定性可以保证。但是这个云服务器有两个缺点： 第一个缺点就是：没有root权限，想要获</description>
+    </item>
+    
+    <item>
+      <title>关于serv00的注册以及使用问题解答</title>
+      <link>https://yixiu.icu/posts/gratis/serv00faq/</link>
+      <pubDate>Thu, 27 Jun 2024 17:31:07 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/serv00faq/</guid>
+      <description>一、注册问题 注册显示我的邮箱已经注册过 可能是确实注册了，但是你没收到邮件 还有很大概率是因为你的IP地址不干净，具体详情请看-&amp;gt;解决一切注册账号IP限制问题 注册显示成功但是没有收到邮件 检查垃圾箱 因为注册人数过多他的邮件可能延时发送 二、使用问题 ssh无法连接服务器 出现ssh: connect</description>
+    </item>
+    
+    <item>
+      <title>Serv00搭建vless节点</title>
+      <link>https://yixiu.icu/posts/gratis/serv00-vless/</link>
+      <pubDate>Tue, 25 Jun 2024 20:26:25 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/serv00-vless/</guid>
+      <description>一、注册serv00账号，以及自动化保号➡️：免费注册十年VPS主机 二、🔗搭建vless节点 1，配置【开启权限】 打开serv00后台，后台地址在注册的时候会发你邮件（参数是这个DevilWEB webpanel）,登录账号是Login,密码是Password 第一步需要做的就是开启可</description>
+    </item>
+    
+    <item>
+      <title>几款好用的免费 SSH 工具推荐，Xshell 替代品，Windows/Mac/Linux 跨平台通用</title>
+      <link>https://yixiu.icu/posts/tool/sshtool/</link>
+      <pubDate>Sat, 22 Jun 2024 10:59:17 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tool/sshtool/</guid>
+      <description>简介 为大家整理几款好用的免费 SSH 工具，都是免费产品，不收费，当然可能有付费版，但是免费版也够用了。可以作为 Xshell 替代品，并且大都是 Windows、Mac、Linux 等跨平台通用的，有的还有 iPhone 和 Android 客户端。SSH 工具是我们购买 VPS 后需要的第一个也是最重要的一个工具，所以选择一个好用的 SSH 工具就</description>
+    </item>
+    
+    <item>
+      <title>10年VPS主机serv00免费获取，自动化保号</title>
+      <link>https://yixiu.icu/posts/gratis/serv00%E6%B3%A8%E5%86%8C%E4%BB%A5%E5%8F%8A%E4%BF%9D%E5%8F%B7/</link>
+      <pubDate>Sat, 22 Jun 2024 10:47:24 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/serv00%E6%B3%A8%E5%86%8C%E4%BB%A5%E5%8F%8A%E4%BF%9D%E5%8F%B7/</guid>
+      <description>🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 ⚠️当前VPS只是一个虚拟机，大家可以搭</description>
+    </item>
+    
+    <item>
+      <title>10年VPS主机免费获取，并且部署vless节点</title>
+      <link>https://yixiu.icu/posts/gratis/freevpsandvless/</link>
+      <pubDate>Sat, 22 Jun 2024 10:47:24 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/freevpsandvless/</guid>
+      <description>🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户</description>
+    </item>
+    
+    <item>
+      <title>ClouDNS域名免费注册，并托管到cloudflare，</title>
+      <link>https://yixiu.icu/posts/gratis/cloudns%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</link>
+      <pubDate>Fri, 21 Jun 2024 19:42:08 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/gratis/cloudns%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/</guid>
+      <description>TG技术交流群（小白误入）：点击打开 ClouDNS官网：点击打开 cloudflare官网：点击打开 关于注册ClouDNS所遇到的问题详解 一、workers和pages 自定义域名证书一直显示初始化【需要双向解析】 这是大多数免费域名注册商对域名的一个限制导致我们需要双向解析 如果你问客</description>
+    </item>
+    
+    <item>
+      <title>Wrangler Commands</title>
+      <link>https://yixiu.icu/posts/tech/wranglercommands/</link>
+      <pubDate>Fri, 21 Jun 2024 00:37:27 +0800</pubDate>
+      
+      <guid>https://yixiu.icu/posts/tech/wranglercommands/</guid>
+      <description>Wrangler 提供了许多命令来管理您的 Cloudflare Workers。 #docs 在默认浏览器中打开 Cloudflare 开发人员文档。 wrangler docs [&amp;lt;COMMAND&amp;gt;] COMMAND string 自选 要了解详细信息的 Wrangler 命令。这将打开默认浏览器，进入描述该命令的文档部分。 #init 通过 create-cloudflare-cli （C3） 工具创建新项目。有多种 Web 框架和模板可供选择。默认情况下会安装依赖项，并可选择立即部署项目。 wrangler init [&amp;lt;NAME&amp;gt;] [OPTIONS] NAME</description>
+    </item>
+    
     <item>
       <title>如何利用Telegram赚钱</title>
-      <link>https://yixiu.icu/posts/avocation/jisouavocation/</link>
+      <link>https://yixiu.icu/posts/essay/jisouavocation/</link>
       <pubDate>Thu, 20 Jun 2024 08:08:10 +0800</pubDate>
       
-      <guid>https://yixiu.icu/posts/avocation/jisouavocation/</guid>
-      <description>如何利用Telegram赚钱 准备工作 需要一个Telegram账号接码平台注册电报/+86手机注册电报 大陆网友需要用到魔法需要看这里 一、邀请赚钱 打开极搜机器人极搜机器人 在机器人窗口输入/pc，点击发送 点击邀请赚钱 获取邀请链接，例如https://t.me/jisou?start=a</description>
+      <guid>https://yixiu.icu/posts/essay/jisouavocation/</guid>
+      <description>如何利用Telegram赚钱 准备工作 需要一个Telegram账号接码平台注册电报/&amp;#43;86手机注册电报 大陆网友需要用到魔法需要看这里 一、邀请赚钱 打开极搜机器人极搜机器人 在机器人窗口输入/pc，点击发送 点击邀请赚钱 获取邀请链接，例如https://t.me/jisou?sta</description>
     </item>
     
     <item>
@@ -35,21 +125,12 @@
     </item>
     
     <item>
-      <title>Nginx正向tcp代理</title>
-      <link>https://yixiu.icu/posts/tech/nginx%E6%AD%A3%E5%90%91tcp%E4%BB%A3%E7%90%86/</link>
-      <pubDate>Mon, 03 Jun 2024 22:20:48 +0800</pubDate>
-      
-      <guid>https://yixiu.icu/posts/tech/nginx%E6%AD%A3%E5%90%91tcp%E4%BB%A3%E7%90%86/</guid>
-      <description>Nginx模块 nginx正向tcp代理需要stream模块，检查模块的方法如下 nginx -V | grep -i stream Nginx配置 配置如下 stream { upstream backend_servers { # ... 上游服务器池配置 ... server 10.190.17.155:80; } server { listen 127.0.0.1:12345; # 监听端口，客户端将连接到这个端口 proxy_pass backend_servers; # 代理到上游服务器池 # 可选配置： # proxy_connect_timeout 10s; # 连接超时时间 # proxy_timeout 30s; # 数据传输超时时间 } }</description>
-    </item>
-    
-    <item>
       <title>🤝友链</title>
       <link>https://yixiu.icu/links/</link>
       <pubDate>Sat, 06 Nov 2021 15:15:53 +0800</pubDate>
       
       <guid>https://yixiu.icu/links/</guid>
-      <description>CMLiu&amp;#39;s Blog CM大佬，技术分享 👉友链格式 名称： Sulv&amp;rsquo;s Blog 网址： https://www.sulvblog.cn 图标： https://www.sulvblog.cn/img/logo.jpg 描述： 一个记录技术、阅读、生活的博客 👉友链申请要求 秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内 👉Hugo博客交流群 787018782</description>
+      <description>CMLiu&amp;#39;s Blog CM大佬，技术分享 👉友链格式 名称： 一休&amp;rsquo;s Blog 网址： https://yixiu.icp 图标： https://yixiu.icp/img/logo.jpg 描述： 一个记录技术、阅读、生活的博客 👉友链申请要求 秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内</description>
     </item>
     
     <item>

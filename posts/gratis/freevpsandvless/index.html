@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>10年VPS主机免费获取，并且部署vless节点 | 一休&#39;s Blog</title>
+<meta name="keywords" content="vps, 免费vps, serv00">
+<meta name="description" content="🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户">
+<meta name="author" content="一休">
+<link rel="canonical" href="https://yixiu.icu/posts/gratis/freevpsandvless/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://yixiu.icu/img/logo.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://yixiu.icu/img/logo.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://yixiu.icu/img/logo.jpg">
+<link rel="apple-touch-icon" href="https://yixiu.icu/img/logo.jpg">
+<link rel="mask-icon" href="https://yixiu.icu/img/logo.jpg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://yixiu.icu/posts/gratis/freevpsandvless/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8017074186344897"
+        crossorigin="anonymous"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+
+<meta property="og:title" content="10年VPS主机免费获取，并且部署vless节点" />
+<meta property="og:description" content="🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yixiu.icu/posts/gratis/freevpsandvless/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-22T10:47:24+08:00" />
+<meta property="article:modified_time" content="2024-06-22T10:47:24+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="10年VPS主机免费获取，并且部署vless节点"/>
+<meta name="twitter:description" content="🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "📚文章",
+          "item": "https://yixiu.icu/posts/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position":  2 ,
+          "name": "🦙 白嫖",
+          "item": "https://yixiu.icu/posts/gratis/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "10年VPS主机免费获取，并且部署vless节点",
+      "item": "https://yixiu.icu/posts/gratis/freevpsandvless/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "10年VPS主机免费获取，并且部署vless节点",
+  "name": "10年VPS主机免费获取，并且部署vless节点",
+  "description": "🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户",
+  "keywords": [
+    "vps", "免费vps", "serv00"
+  ],
+  "articleBody": "🌟 免费虚拟主机 - Serv00 Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含: 3GB 存储空间 512MB 内存 不限流量 支持PHP、MySQL等网站开发语言和数据库 提供免费的二级域名 可自定义开放端口 支持SSH访问 要求是每3个月需登录一次控制面板或SSH,避免账号被回收 访问官网➡️: https://www.serv00.com/ 一、注册serv00账户【⚠️名额有限，快来注册吧！】 点击「Register an account」进入注册页面,注册之前需要注意三点\n邮箱必须是真实邮箱，需要激活验证 用户名(Username)自己设置英文就可以，同时也代表域名比如yixiu,域名就是yixiu.serv00.com 答案(Answer)不要空着，可填写free 输好之后点击「Create account」,如果用户名被占用了，换一个就行，如果没有被占用就会给你输入的邮箱发送消息。如果页面上方出现以下绿色提示信息，就代表账户注册成功了，去检查邮箱就可以 Serv00欢迎邮件包括所有的重要信息，包括后台管理面板和ssh登录的用户名密码，以及ssh主机名等，邮件千万记得保存，或者复制下来保存都可以。 Serv00后台面板为DevilWeb，用起来还是很方便的，登录的账户密码就是邮件里面的Login和Password，这个账号同样适用其他服务，比如ssh、mysql等。如果没有安装第三方的ssh客户端可以使用windows自带的openssh，mac的终端来登录 ssh xxxx@sx.serv00.com #将 xxxx 换成自己的用户名，sx为s1-s4，依照欢迎邮件中的主机名 #命令行在输入密码的时候是看不到的，输完之后直接点回车就可以 ⚠️到目前位置serv00账号已经注册好了\n二、ClouDNS域名托管到serv00 打开ClouDNS官网和DevilWEB 网络面板（在邮件里面找面板的链接，用账号密码登录） 删除ClouDNS中域名所有的DNS记录 托管域名到serv00 域名会有双向解析的问题，把托管到serv00之后自动生成的DNS记录全部添加到ClouDNS中 后续如果有新的耳机域名解析也需要添加到ClouDNS 三、利用FreeSSL生成免费证书 打开FreeSSL官网(有账号登录，没账号注册，非常简单) 解析的时候注意serv00和ClouDNS都需要解析 四、🔗搭建vless节点 1，配置【开启权限】 第一步需要做的就是开启可以运行自己应用的权限。Additional services -\u003e Run your own applications -\u003e Enabled 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。 2，安装PM2 PM2 是一款非常优秀的node.js进程管理工具。可以通过SSH用下面的指令一键安装。\nbash \u003c(curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh) 使用pm2，请直接用路径调用：~/.npm-global/bin/pm2，例如~/.npm-global/bin/pm2 list 就可以看到自己添加的应用。\n「 另外，在`SSH`中通过下面的指令就可以开启页面监控功能！不需要可以不开 」 ~/.npm-global/bin/pm2 monitor 如果没有账号可以按照提示创建就可以，然后会给出登录页面的地址。 https://app.pm2.io/#/bucket/65f3be6efe520b3f5503d9aa 用浏览器登录就可以看到了，非常的方便。\n3，安装Vless Vless是一个代理节点应用，可以通过SSH用下面的指令一键安装。\n进入项目操作目录,以下命令行中换成你的域名\ncd ~/domains/ 克隆serv00-vless项目到\ngit clone https://github.com/qwer-search/serv00-vless \u0026\u0026 mv -f serv00-vless vless \u0026\u0026 cd vless \u0026\u0026 rm -f README.md 在serv00的管理页面上开启一个端口，Port reservation -\u003e Add port添加一个TCP的端口号。再在File Manager 里面找到Vless的文件下的app.js文件，修改里面的端口号为刚刚添加的端口号。类似下面修改为了12345\nconst port = process.env.PORT || 12345; 安装依赖\nnpm install 安装完毕后，使用PM2启动并守护vless进程：\n~/.npm-global/bin/pm2 start app.js --name vless 接着去你的代理客户端软件中手动添加vless配置即可：\nKey Value 地址 Panel 中 WWW Websites 选项卡里的你的 Domain name 端口 你放行的端口 用户 ID 37a0bd7c-8b9f-4693-8916-bd1e2da0a817 传输协议 ws 伪装域名 同地址 ws path / 也可以复制以下vless节点信息，修改\u003c域名地址\u003e为Panel 中 WWW Websites 选项卡里的你的 Domain name，\u003c端口\u003e为你放行的端口即可\nvless://37a0bd7c-8b9f-4693-8916-bd1e2da0a817@\u003c域名地址\u003e:\u003c端口\u003e?flow=\u0026security=none\u0026encryption=none\u0026type=ws\u0026host=\u003c域名地址\u003e\u0026path=/\u0026sni=\u0026fp=\u0026pbk=\u0026sid=#%E4%B8%80%E4%BC%91vless%EF%BC%8CTG%E7%BE%A4%EF%BC%9Ahttps://t.me/yxjsjl 上表没有给出的可以不填。\n我用的客户端是v2rayU，按照这个配置就行。目前测试下来连接不是很稳定，延迟忽高忽低，有300ms左右。\n纯净度检测\n4，自动化 听说serv00会不定时重启机器，所以我们把PM2添加开机自启。而且serv00每三个月内必须要有一次登录面板或者SSH连接，不然会删号，也可以通过一个脚本解决问题，接下来我会详细说明。\n自动续期 新建opt目录,并进入目录\nmkdir ~/opt 新建 auto-renew.sh 脚本：\ncat \u003e auto-renew.sh \u003c\u003c EOF #!/bin/bash while true; do sshpass -p '密码' ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt 用户名@地址 \"exit\" \u0026 sleep 259200 #30天为259200秒 done EOF 另外记得把其中的密码、用户名、ssh的地址修改为你自己的。\n给 auto-renew.sh添加可执行权限：\nchmod +x auto-renew.sh 使用PM2启动：\n~/.npm-global/bin/pm2 start ./auto-renew.sh 这样就会每隔一个月自动执行一次SSH连接，自己SSH自己进行续期。\n自动启动 在serv00的管理页面上找到Cron jobs选项卡，使用Add cron job功能添加任务，Specify time选择After reboot，即为重启后运行。Form type选择Advanced，Command写：\n/home/你的用户名/.npm-global/bin/pm2 resurrect 添加完之后，在SSH窗口保存PM2的当前任务列表快照：\n~/.npm-global/bin/pm2 save 这样每次serv00不定时重启任务时，都能自动调用PM2读取保存的任务列表快照，恢复任务列表。如果在保存了任务列表快照后又改变了任务PM2的任务列表，需要重新执行pm2 save以更新任务列表。\n",
+  "wordCount" : "2503",
+  "inLanguage": "zh",
+  "datePublished": "2024-06-22T10:47:24+08:00",
+  "dateModified": "2024-06-22T10:47:24+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "一休"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yixiu.icu/posts/gratis/freevpsandvless/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "一休's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yixiu.icu/img/logo.jpg"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://yixiu.icu/" accesskey="h" title="一休&#39;s Blog (Alt + H)">
+            <img src="https://yixiu.icu/img/logo.jpg" alt="logo" aria-label="logo"
+                 height="35">一休&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://yixiu.icu/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/" title="🏠 主页">
+                <span>🏠 主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/posts" title="📚 文章">
+                <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/tags" title="🧩 标签">
+                <span>🧩 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/archives/" title="⏱️ 时间轴">
+                <span>⏱️ 时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/about" title="🙋🏻‍♂️ 关于">
+                <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://yixiu.icu/links" title="🤝 友链">
+                <span>🤝 友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://yixiu.icu/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://yixiu.icu/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://yixiu.icu/posts/gratis/">🦙 白嫖</a></div>
+            <h1 class="post-title">
+                10年VPS主机免费获取，并且部署vless节点
+            </h1>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2024-06-22
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>2503字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>5分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>一休
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://yixiu.icu/tags/vps/" style="color: var(--secondary)!important;">Vps</a>
+                &nbsp;<a href="https://yixiu.icu/tags/%E5%85%8D%E8%B4%B9vps/" style="color: var(--secondary)!important;">免费vps</a>
+                &nbsp;<a href="https://yixiu.icu/tags/serv00/" style="color: var(--secondary)!important;">Serv00</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://yixiu.icu/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId: "https://yixiu001-myblog.hf.space", 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-%e5%85%8d%e8%b4%b9%e8%99%9a%e6%8b%9f%e4%b8%bb%e6%9c%ba---serv00" aria-label="🌟 免费虚拟主机 - Serv00">🌟 免费虚拟主机 - Serv00</a><ul>
+                        
+                <li>
+                    <a href="#%e4%b8%80%e6%b3%a8%e5%86%8cserv00%e8%b4%a6%e6%88%b7%e5%90%8d%e9%a2%9d%e6%9c%89%e9%99%90%e5%bf%ab%e6%9d%a5%e6%b3%a8%e5%86%8c%e5%90%a7" aria-label="一、注册serv00账户【⚠️名额有限，快来注册吧！】">一、注册serv00账户【⚠️名额有限，快来注册吧！】</a></li>
+                <li>
+                    <a href="#%e4%ba%8ccloudns%e5%9f%9f%e5%90%8d%e6%89%98%e7%ae%a1%e5%88%b0serv00" aria-label="二、ClouDNS域名托管到serv00">二、ClouDNS域名托管到serv00</a></li>
+                <li>
+                    <a href="#%e4%b8%89%e5%88%a9%e7%94%a8freessl%e7%94%9f%e6%88%90%e5%85%8d%e8%b4%b9%e8%af%81%e4%b9%a6" aria-label="三、利用FreeSSL生成免费证书">三、利用FreeSSL生成免费证书</a></li>
+                <li>
+                    <a href="#%e5%9b%9b%e6%90%ad%e5%bb%bavless%e8%8a%82%e7%82%b9" aria-label="四、🔗搭建vless节点">四、🔗搭建vless节点</a><ul>
+                        
+                <li>
+                    <a href="#1%e9%85%8d%e7%bd%ae%e5%bc%80%e5%90%af%e6%9d%83%e9%99%90" aria-label="1，配置【开启权限】">1，配置【开启权限】</a></li>
+                <li>
+                    <a href="#2%e5%ae%89%e8%a3%85pm2" aria-label="2，安装PM2">2，安装PM2</a></li>
+                <li>
+                    <a href="#3%e5%ae%89%e8%a3%85vless" aria-label="3，安装Vless">3，安装Vless</a></li>
+                <li>
+                    <a href="#4%e8%87%aa%e5%8a%a8%e5%8c%96" aria-label="4，自动化">4，自动化</a><ul>
+                        
+                <li>
+                    <a href="#%e8%87%aa%e5%8a%a8%e7%bb%ad%e6%9c%9f" aria-label="自动续期">自动续期</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%8a%a8%e5%90%af%e5%8a%a8" aria-label="自动启动">自动启动</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="-免费虚拟主机---serv00">🌟 免费虚拟主机 - Serv00<a hidden class="anchor" aria-hidden="true" href="#-免费虚拟主机---serv00">#</a></h1>
+<ul>
+<li>Serv00 是一家提供免费虚拟主机的厂商。它的免费套餐包含:</li>
+<li>3GB 存储空间</li>
+<li>512MB 内存</li>
+<li>不限流量</li>
+<li>支持PHP、MySQL等网站开发语言和数据库</li>
+<li>提供免费的二级域名</li>
+<li>可自定义开放端口</li>
+<li>支持SSH访问</li>
+<li>要求是每3个月需登录一次控制面板或SSH,避免账号被回收</li>
+</ul>
+<p>访问官网➡️: <a href="https://www.serv00.com/" target="_blank" rel="noopener">https://www.serv00.com/</a>
+<img loading="lazy" src="img_1.png" alt="img_1.png"  />
+</p>
+<h2 id="一注册serv00账户名额有限快来注册吧">一、注册serv00账户【⚠️名额有限，快来注册吧！】<a hidden class="anchor" aria-hidden="true" href="#一注册serv00账户名额有限快来注册吧">#</a></h2>
+<p><img loading="lazy" src="img.png" alt="img.png"  />
+
+点击「Register an account」进入注册页面,注册之前需要注意三点</p>
+<ul>
+<li>邮箱必须是真实邮箱，需要激活验证</li>
+<li>用户名(Username)自己设置英文就可以，同时也代表域名比如<code>yixiu</code>,域名就是<code>yixiu.serv00.com</code></li>
+<li>答案(Answer)不要空着，可填写<code>free</code>
+<img loading="lazy" src="img_2.png" alt="img_2.png"  />
+
+输好之后点击「Create account」,如果用户名被占用了，换一个就行，如果没有被占用就会给你输入的邮箱发送消息。如果页面上方出现以下绿色提示信息，就代表账户注册成功了，去检查邮箱就可以
+<img loading="lazy" src="img_3.png" alt="img_3.png"  />
+
+Serv00欢迎邮件包括所有的重要信息，包括后台管理面板和ssh登录的用户名密码，以及ssh主机名等，邮件千万记得保存，或者复制下来保存都可以。
+<img loading="lazy" src="img_4.png" alt="img_4.png"  />
+
+Serv00后台面板为DevilWeb，用起来还是很方便的，登录的账户密码就是邮件里面的Login和Password，这个账号同样适用其他服务，比如ssh、mysql等。如果没有安装第三方的ssh客户端可以使用windows自带的openssh，mac的终端来登录</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ssh xxxx@sx.serv00.com
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#将 xxxx 换成自己的用户名，sx为s1-s4，依照欢迎邮件中的主机名</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#命令行在输入密码的时候是看不到的，输完之后直接点回车就可以</span>
+</span></span></code></pre></div><p><strong>⚠️到目前位置serv00账号已经注册好了</strong></p>
+<h2 id="二cloudns域名托管到serv00">二、ClouDNS域名托管到serv00<a hidden class="anchor" aria-hidden="true" href="#二cloudns域名托管到serv00">#</a></h2>
+<ul>
+<li>打开<a href="https://www.cloudns.net/" target="_blank" rel="noopener">ClouDNS官网</a>和DevilWEB 网络面板（在邮件里面找面板的链接，用账号密码登录）</li>
+<li>删除ClouDNS中域名所有的DNS记录</li>
+<li>托管域名到serv00</li>
+<li>域名会有双向解析的问题，把托管到serv00之后自动生成的DNS记录全部添加到ClouDNS中</li>
+<li>后续如果有新的耳机域名解析也需要添加到ClouDNS</li>
+</ul>
+<h2 id="三利用freessl生成免费证书">三、利用FreeSSL生成免费证书<a hidden class="anchor" aria-hidden="true" href="#三利用freessl生成免费证书">#</a></h2>
+<ul>
+<li>打开<a href="https://freessl.cn/" target="_blank" rel="noopener">FreeSSL官网</a>(有账号登录，没账号注册，非常简单)</li>
+<li>解析的时候注意serv00和ClouDNS都需要解析</li>
+</ul>
+<h2 id="四搭建vless节点">四、🔗搭建vless节点<a hidden class="anchor" aria-hidden="true" href="#四搭建vless节点">#</a></h2>
+<h3 id="1配置开启权限">1，配置【开启权限】<a hidden class="anchor" aria-hidden="true" href="#1配置开启权限">#</a></h3>
+<ul>
+<li>第一步需要做的就是开启可以运行自己应用的权限。Additional services -&gt; Run your own applications -&gt; Enabled 如果不开启这一项，自己的用户目录下的所有文件都无法添加可执行权限。</li>
+</ul>
+<h3 id="2安装pm2">2，安装PM2<a hidden class="anchor" aria-hidden="true" href="#2安装pm2">#</a></h3>
+<p><a href="https://pm2.io/" target="_blank" rel="noopener">PM2</a> 是一款非常优秀的node.js进程管理工具。可以通过SSH用下面的指令一键安装。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bash &lt;<span style="color:#f92672">(</span>curl -s https://raw.githubusercontent.com/k0baya/alist_repl/main/serv00/install-pm2.sh<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>使用pm2，请直接用路径调用：<code>~/.npm-global/bin/pm2</code>，例如<code>~/.npm-global/bin/pm2 list</code> 就可以看到自己添加的应用。</p>
+<details>
+<summary><code><strong>「 另外，在`SSH`中通过下面的指令就可以开启页面监控功能！不需要可以不开 」</strong></code></summary>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>~/.npm-global/bin/pm2 monitor
+</span></span></code></pre></div><p>如果没有账号可以按照提示创建就可以，然后会给出登录页面的地址。
+<a href="https://app.pm2.io/#/bucket/65f3be6efe520b3f5503d9aa" target="_blank" rel="noopener">https://app.pm2.io/#/bucket/65f3be6efe520b3f5503d9aa</a>
+用浏览器登录就可以看到了，非常的方便。</p>
+</details>
+<h3 id="3安装vless">3，安装Vless<a hidden class="anchor" aria-hidden="true" href="#3安装vless">#</a></h3>
+<p>Vless是一个代理节点应用，可以通过SSH用下面的指令一键安装。</p>
+<p>进入项目操作目录,以下命令行中<code>&lt;Your-domain&gt;</code>换成你的域名</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd ~/domains/&lt;Your-domain&gt;
+</span></span></code></pre></div><p>克隆serv00-vless项目到</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/qwer-search/serv00-vless <span style="color:#f92672">&amp;&amp;</span> mv -f serv00-vless vless <span style="color:#f92672">&amp;&amp;</span> cd vless <span style="color:#f92672">&amp;&amp;</span> rm -f README.md
+</span></span></code></pre></div><p>在serv00的管理页面上开启一个端口，<code>Port reservation -&gt; Add port</code>添加一个<code>TCP</code>的端口号。再在<code>File Manager</code> 里面找到Vless的文件下的<code>app.js</code>文件，修改里面的端口号为刚刚添加的端口号。类似下面修改为了<code>12345</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>const port <span style="color:#f92672">=</span> process.env.PORT <span style="color:#f92672">||</span> 12345;
+</span></span></code></pre></div><p>安装依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>npm install
+</span></span></code></pre></div><p>安装完毕后，使用<code>PM2</code>启动并守护vless进程：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>~/.npm-global/bin/pm2 start app.js --name vless
+</span></span></code></pre></div><p>接着去你的代理客户端软件中手动添加vless配置即可：</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地址</td>
+<td>Panel 中 WWW Websites 选项卡里的你的 Domain name</td>
+</tr>
+<tr>
+<td>端口</td>
+<td>你放行的端口</td>
+</tr>
+<tr>
+<td>用户 ID</td>
+<td>37a0bd7c-8b9f-4693-8916-bd1e2da0a817</td>
+</tr>
+<tr>
+<td>传输协议</td>
+<td>ws</td>
+</tr>
+<tr>
+<td>伪装域名</td>
+<td>同地址</td>
+</tr>
+<tr>
+<td>ws path</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<p>也可以复制以下vless节点信息，修改<code>&lt;域名地址&gt;</code>为Panel 中 <code>WWW Websites</code> 选项卡里的你的 <code>Domain name</code>，<code>&lt;端口&gt;</code>为你放行的端口即可</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vless://37a0bd7c-8b9f-4693-8916-bd1e2da0a817@&lt;域名地址&gt;:&lt;端口&gt;?flow<span style="color:#f92672">=</span>&amp;security<span style="color:#f92672">=</span>none&amp;encryption<span style="color:#f92672">=</span>none&amp;type<span style="color:#f92672">=</span>ws&amp;host<span style="color:#f92672">=</span>&lt;域名地址&gt;&amp;path<span style="color:#f92672">=</span>/&amp;sni<span style="color:#f92672">=</span>&amp;fp<span style="color:#f92672">=</span>&amp;pbk<span style="color:#f92672">=</span>&amp;sid<span style="color:#f92672">=</span><span style="color:#75715e">#%E4%B8%80%E4%BC%91vless%EF%BC%8CTG%E7%BE%A4%EF%BC%9Ahttps://t.me/yxjsjl</span>
+</span></span></code></pre></div><p>上表没有给出的可以不填。</p>
+<p>我用的客户端是v2rayU，按照这个配置就行。目前测试下来连接不是很稳定，延迟忽高忽低，有300ms左右。</p>
+<p><a href="https://scamalytics.com/" target="_blank" rel="noopener">纯净度检测</a></p>
+<h3 id="4自动化">4，自动化<a hidden class="anchor" aria-hidden="true" href="#4自动化">#</a></h3>
+<p>听说serv00会不定时重启机器，所以我们把PM2添加开机自启。而且serv00每三个月内必须要有一次登录面板或者SSH连接，不然会删号，也可以通过一个脚本解决问题，接下来我会详细说明。</p>
+<h4 id="自动续期">自动续期<a hidden class="anchor" aria-hidden="true" href="#自动续期">#</a></h4>
+<p>新建<code>opt</code>目录,并进入目录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mkdir ~/opt
+</span></span></code></pre></div><p>新建 auto-renew.sh 脚本：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat &gt; auto-renew.sh <span style="color:#e6db74">&lt;&lt; EOF
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">while true; do
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  sshpass -p &#39;密码&#39; ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt 用户名@地址 &#34;exit&#34; &amp;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  sleep 259200  #30天为259200秒
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">done
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>另外记得把其中的密码、用户名、ssh的地址修改为你自己的。</p>
+<p>给 <code>auto-renew.sh</code>添加可执行权限：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>chmod +x auto-renew.sh
+</span></span></code></pre></div><p>使用PM2启动：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>~/.npm-global/bin/pm2 start ./auto-renew.sh
+</span></span></code></pre></div><p>这样就会每隔一个月自动执行一次<code>SSH</code>连接，自己SSH自己进行续期。</p>
+<h4 id="自动启动">自动启动<a hidden class="anchor" aria-hidden="true" href="#自动启动">#</a></h4>
+<p>在<code>serv00</code>的管理页面上找到<code>Cron jobs</code>选项卡，使用<code>Add cron job</code>功能添加任务，<code>Specify time</code>选择<code>After reboot</code>，即为重启后运行。<code>Form type</code>选择<code>Advanced，Command</code>写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/home/你的用户名/.npm-global/bin/pm2 resurrect
+</span></span></code></pre></div><p>添加完之后，在<code>SSH</code>窗口保存<code>PM2</code>的当前任务列表快照：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>~/.npm-global/bin/pm2 save
+</span></span></code></pre></div><p>这样每次<code>serv00</code>不定时重启任务时，都能自动调用<code>PM2</code>读取保存的任务列表快照，恢复任务列表。如果在保存了任务列表快照后又改变了任务<code>PM2</code>的任务列表，需要重新执行<code>pm2 save</code>以更新任务列表。</p>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://yixiu.icu/img/wechatpay.jpg" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://yixiu.icu/img/alipay.jpg" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="prev" href="https://yixiu.icu/posts/gratis/serv00%E6%B3%A8%E5%86%8C%E4%BB%A5%E5%8F%8A%E4%BF%9D%E5%8F%B7/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>10年VPS主机serv00免费获取，自动化保号</span>
+  </a>
+  <a class="next" href="https://yixiu.icu/posts/gratis/cloudns%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>ClouDNS域名免费注册，并托管到cloudflare，</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 20px;
+        content: '👉展开评论';
+        color: var(--content);
+    }
+    .comments_details[open] summary::marker{
+        font-size: 20px;
+        content: '👇关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);">...</span>
+        </summary>
+        <div id="tcomment"></div>
+    </details>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.36/twikoo.all.min.js">
+    </script>
+    <script>
+        twikoo.init({
+            envId: "https://yixiu001-myblog.hf.space",
+        el: "#tcomment",
+            lang: 'zh-CN',
+            region:  null ,
+        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        })
+    </script>
+</div>
+</article>
+</main>
+
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                let textData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"一休's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '复制';
+
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                let text = codeblock.textContent;
+
+                
+                
+                
+                
+                navigator.clipboard.writeText(text);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {}
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+</body>
+
+</html>
